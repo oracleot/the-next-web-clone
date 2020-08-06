@@ -7,17 +7,18 @@
     <title>The Next Web Clone</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
     <!--navbar one-->
     <!--featured articles two-->
-    <section class="featured-articles">
-      <a href="#" class="featured-article first-fa">
-        <article >
+    <section class="featured-articles flex">
+      <a href="#" class="main-art">
+        <article class="featured-article first-fa">
           <div class="fa-description">
             <p>INSIGHTS</p>
-            <h2>
+            <h2 > 
               Mike Pompeo wants to build the US a ‘clean’ internet free of Chinese tech
             </h2>
             <p>by Matthew Beedham <span class="material-icons">
@@ -31,51 +32,54 @@
           </div>
         </article>
       </a>
-      <a href="#" class="featured-article second-fa">
-        <article>
-          <div class="fa-description">
-            <p>INSIGHTS</p>
-            <h2>
-              Mike Pompeo wants to build the US a ‘clean’ internet free of Chinese tech
-            </h2>
-            <p>by Matthew Beedham <span class="material-icons">
-              schedule
-              </span>
-              21 minutes ago
-              <span class="material-icons">
-                share
-                </span> 0
-              </p>       
+      <div class="res-aside flex">
+        <a href="#">
+          <article  class="featured-article second-fa"> 
+            <div class="fa-description">
+              <p>INSIGHTS</p>
+              <h2>
+                Mike Pompeo wants to build the US a ‘clean’ internet free of Chinese tech
+              </h2>
+              <p>by Matthew Beedham <span class="material-icons">
+                schedule
+                </span>
+                21 minutes ago
+                <span class="material-icons">
+                  share
+                  </span> 0
+                </p>       
+  
+            </div>
+          
+          </article>
+        </a>
+        <a href="#">
+          <article class="featured-article third-fa"> 
+            <div class="fa-description">
+              <p>TECH</p>
+              <h2>
+                A closer look at Ohio’s self-driving shuttle bus trial that’s now a food delivery service
+              </h2>
+              <p>by Cities Today <span class="material-icons">
+                schedule
+                </span>
+                43 minutes ago
+                <span class="material-icons">
+                  share
+                  </span> 
+                </p>       
+            </div>
+         
+          </article>
+        </a>
 
-          </div>
-        
-        </article>
-      </a>
-      <a href="#" class="featured-article third-fa">
-        <article>
-          <div class="fa-description">
-            <p>TECH</p>
-            <h2>
-              A closer look at Ohio’s self-driving shuttle bus trial that’s now a food delivery service
-            </h2>
-            <p>by Cities Today <span class="material-icons">
-              schedule
-              </span>
-              43 minutes ago
-              <span class="material-icons">
-                share
-                </span> 
-              </p>       
-          </div>
-       
-        </article>
-      </a>
+      </div>
+      
     </section>
     <!--latest news one-->
     <!--latest funding two-->
     <!--category section one-->
-    <!--latest deals two-->
-    <section class="flex">
+    <section class="latest-head flex">
       <h2>Latest Deals ></h2>
       <p>See all deals</p>
     </section>
@@ -137,6 +141,7 @@
         </div>
       </article>
     </section>
+    <!--latest deals two-->
     <!--footer one-->
    
   </body>
