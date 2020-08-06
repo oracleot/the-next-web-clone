@@ -1,216 +1,189 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .main-art {
-    flex: 2;
+  flex: 2;
 }
 
 .res-aside {
-    flex-direction:column;
-    flex: 1;
+  flex-direction: column;
+  flex: 1;
 }
-.res-aside a {
-   flex:1; 
-  
 
+.res-aside a {
+  flex: 1;
 }
 
 .featured-articles {
-    height: 70vh;
-    width: 100%;
-
+  height: 70vh;
+  width: 100%;
 }
 
 .featured-articles::after {
-    content: "";
-    height: 70vh;
-    width: 100%;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: .6;
-    z-index: 0;
+  content: "";
+  height: 70vh;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  z-index: 0;
 }
 
 .featured-article {
-    position: relative;
+  position: relative;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .a-text {
-    color: #fff;
-    font-size: 16px;
-    z-index: 10;
+  color: #fff;
+  font-size: 16px;
+  z-index: 10;
 }
 
 .featured-articles span {
-    font-size: 14px;
+  font-size: 14px;
 }
-.first-fa {
-    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/07/Pompeo-Iran-Group-Announcement-e1594106115276.jpg");
 
-    
+.first-fa {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/07/Pompeo-Iran-Group-Announcement-e1594106115276.jpg");
 }
+
 .second-fa {
-    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/image-6-796x417.png");
-    
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/image-6-796x417.png");
 }
+
 .third-fa {
-    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/1-2-796x417.jpg");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/1-2-796x417.jpg");
 }
 
 .fa-description {
-    position: absolute;
-    bottom: 0;
-    left: 14px;
-    padding: 1rem;
-    color: #fff;
-    font-size: 16px;
-    z-index: 10;
-}
-
-.res-aside {
-    flex-direction:column;
-}
-.res-aside a {
-   flex:1; 
-
-}
-
-.featured-article {
-    height: 100%;
-    background-color: black;
-    background-size: cover;
-    background-position: center;
-}
-
-.first-fa {
-    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/07/Pompeo-Iran-Group-Announcement-e1594106115276.jpg");
-
-    
-}
-.second-fa {
-    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/image-6-796x417.png");
-    
-}
-.third-fa {
-    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/1-2-796x417.jpg");
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  padding: 1rem;
+  color: #fff;
+  font-size: 16px;
+  z-index: 10;
 }
 
 /* latest-deals */
-
 .latest-head {
-    font-size: 16px;
-    line-height: 32px;
-    color: #EB4222;
-    width: 80%;
-    height: 60px;
-    line-height: 60px;
-    margin: 0 auto;
-    justify-content: space-between;
+  font-size: 16px;
+  color: #eb4222;
+  width: 80%;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
+
 .latest-deals {
-    max-width: 80vw;
-    margin: auto;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-
-}
-
-.deal {
-    height: 280;
+  max-width: 80vw;
+  margin: auto;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
 
 .bg1 {
-    background: url('https://cdnp0.stackassets.com/0799bf00352de2d2111fa7580a4aeb4d5e36829c/store/831574f40ca85b498631ae2881f81d02cd9eedd411afd5c0c8f689969ad6/sale_19040_primary_image.jpg');
-}
-.bg2 {
-    background: url('https://cdnp0.stackassets.com/32247da9a5b3bbc8dbae1cd6b539eee41a174c44/store/a6921f781563eb46ab4e7e9ad1edc4c7cd473f60de6504f05e70f98c56f7/sale_32423_primary_image.jpg');
-}
-.bg3 {
-    background: url('https://cdnp0.stackassets.com/2524c83054eaeeb1d74498c073e4db0134ed7dd1/store/c0c38b6f9d1ac8b5161d84509851f3bf72c0a2e7752f58f971373034be11/sale_32414_primary_image.jpg');
-}
-.bg4 {
-    background: url("https://cdnp2.stackassets.com/1b0bd98a9c257d0deba32330f074a986c0ac80ab/store/5244ce0f683265f98baeb686db693a0571c541750ca7a48220c02ced7df1/sale_32417_primary_image.jpg");
-}
-.bg5 {
-    background-image: url("https://cdnp0.stackassets.com/49205c1bbff3909782605ff760780b62c695c1dc/store/51459af533e4f99429f037c1db33105d2294ebf64029a82b808d85527e58/sale_32030_primary_image.jpg");
-}
-.bg6 {
-    background-image: url("https://cdnp3.stackassets.com/ff35439fd6a5c9e2c5cc4514a7f1923c9ef7ea6f/store/1532b43da15553514d7d8c0215fdd0d1033614864b7071dab71a69d5335b/sale_19163_primary_image.jpg");
-}
-.bg7 {
-    background-image: url("https://cdnp2.stackassets.com/f1536aca6ce5cf2e7bfa41eb44fe1160e9b6dbe8/store/584c729c0cbc5db05e8c589444e9f3d397c51222aecaa7d22f421681388b/sale_31768_primary_image.jpg");
-}
-.bg8 {
-    background-image: url("https://cdnp3.stackassets.com/0b442829152188ef5c1de0aff7d72820282f26e0/store/73b9b30bec03d67a0c89bae3aaaddafc5a59895b1edd5194d61ab010f926/sale_20564_primary_image.jpg");
+  background: url("https://cdnp0.stackassets.com/0799bf00352de2d2111fa7580a4aeb4d5e36829c/store/831574f40ca85b498631ae2881f81d02cd9eedd411afd5c0c8f689969ad6/sale_19040_primary_image.jpg");
 }
 
-.deal-img { 
-    height: 200px;
-    background-size: cover;
-    background-position: center;
+.bg2 {
+  background: url("https://cdnp0.stackassets.com/32247da9a5b3bbc8dbae1cd6b539eee41a174c44/store/a6921f781563eb46ab4e7e9ad1edc4c7cd473f60de6504f05e70f98c56f7/sale_32423_primary_image.jpg");
+}
+
+.bg3 {
+  background: url("https://cdnp0.stackassets.com/2524c83054eaeeb1d74498c073e4db0134ed7dd1/store/c0c38b6f9d1ac8b5161d84509851f3bf72c0a2e7752f58f971373034be11/sale_32414_primary_image.jpg");
+}
+
+.bg4 {
+  background: url("https://cdnp2.stackassets.com/1b0bd98a9c257d0deba32330f074a986c0ac80ab/store/5244ce0f683265f98baeb686db693a0571c541750ca7a48220c02ced7df1/sale_32417_primary_image.jpg");
+}
+
+.bg5 {
+  background-image: url("https://cdnp0.stackassets.com/49205c1bbff3909782605ff760780b62c695c1dc/store/51459af533e4f99429f037c1db33105d2294ebf64029a82b808d85527e58/sale_32030_primary_image.jpg");
+}
+
+.bg6 {
+  background-image: url("https://cdnp3.stackassets.com/ff35439fd6a5c9e2c5cc4514a7f1923c9ef7ea6f/store/1532b43da15553514d7d8c0215fdd0d1033614864b7071dab71a69d5335b/sale_19163_primary_image.jpg");
+}
+
+.bg7 {
+  background-image: url("https://cdnp2.stackassets.com/f1536aca6ce5cf2e7bfa41eb44fe1160e9b6dbe8/store/584c729c0cbc5db05e8c589444e9f3d397c51222aecaa7d22f421681388b/sale_31768_primary_image.jpg");
+}
+
+.bg8 {
+  background-image: url("https://cdnp3.stackassets.com/0b442829152188ef5c1de0aff7d72820282f26e0/store/73b9b30bec03d67a0c89bae3aaaddafc5a59895b1edd5194d61ab010f926/sale_20564_primary_image.jpg");
+}
+
+.deal-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
 }
 
 .deal-desc {
-    padding: 1rem;
-}
-.deal-desc a{
-    font-size: 16px;
-    font-weight: 700;
-    color: #333;
+  padding: 1rem;
 }
 
-
+.deal-desc a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
 
 .cancel {
-    text-decoration: line-through;
-    color: #aaa;
-    font-size: 13px;
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 13px;
 }
 
-
-
-
 /* Desktop */
-@media screen and (min-width: 1024px) {
-      
 
-  }
-  
-  /* Tablet */
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-  
-  }
-  
-  /* Mobile */
-  @media screen and (max-width: 767px) {
-    .featured-articles {
-        flex-direction: column;
-        height: auto;
-    }
-    .featured-article {
-        height: 200px;
-    }
-    .deal {
-        display: grid;
-        grid-template-columns: 80px 1fr;
-        min-width: 100%;
-    }
-    .deal-img {
-        width: 100%;
-        height: auto;
-    }
+/* @media screen and (min-width: 1024px) {
 
-    .fa-description {
-        font-size: 12px;
-    }
-    
+} */
+
+/* Tablet */
+
+/* @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+} */
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .featured-articles {
+    flex-direction: column;
+    height: auto;
   }
+
+  .featured-article {
+    height: 200px;
+  }
+
+  .deal {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    min-width: 100%;
+  }
+
+  .deal-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .fa-description {
+    font-size: 12px;
+  }
+}
