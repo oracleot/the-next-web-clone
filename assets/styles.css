@@ -233,6 +233,83 @@ h2.title {
   background-color: #000;
 }
 
+/* latest funding two */
+.latest-funding {
+  width: 100vw;
+}
+
+.latest-funding-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 10px;
+}
+
+.latest-funding-card {
+  height: 250px;
+
+}
+
+.card-img {
+  position: relative;
+
+}
+.card-img img {
+  max-width: 100%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
+.card-img p {
+  margin: .4rem 0;
+}
+.card-header {
+  width: 100%;
+}
+
+.card-header h4 {
+  font-size: 21px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 20px;
+}
+
+.card-title{
+  background-color:#EB4222;
+  color: #fff;
+  padding: 1rem;
+
+}
+
+.card-data {
+  padding: .31rem 0;
+  text-align: center;
+  background-color: #FCEBE6;
+  line-height: 20px;
+}
+
+.card-data h5 {
+  font-weight: 200;
+}
+
+.more-card-details {
+  border-top: 1px solid blanchedalmond;
+}
+
+.card-details, 
+.more-card-details {
+  font-size: 15px;
+  padding: .5rem;
+}
+
+.align-text {
+  
+}
+
+/* End of latest funding */
+
 .main-art {
   flex: 2;
 }
@@ -253,17 +330,18 @@ h2.title {
 
 .featured-articles::after {
   content: "";
-  height: 70vh;
+  height: 84%;
   width: 100%;
-  background-color: black;
+  background-color: rgb(27, 26, 26);
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.6;
+  opacity: 0.4;
   z-index: 0;
 }
 
 .featured-article {
+  margin: 10px;
   position: relative;
   height: 100%;
   background-size: cover;
