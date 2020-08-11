@@ -20,24 +20,28 @@ a {
   color: inherit;
 }
 
-h2 {
-  font-weight: 800;
-  line-height: 1em;
-}
-
 .flex {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .container {
-  max-width: 1192px;
-  padding: 0 20px;
+  width: 100%;
+  padding: 0 10px;
   margin: auto;
 }
 
+h2.title {
+  color: red;
+}
+
 nav {
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
 }
 
 .logo {
@@ -68,41 +72,26 @@ nav {
 .main-nav,
 .logo,
 .search-hamburger {
-  min-height: 25px;
+  min-height: 20px;
 }
 
-.top-nav {
-  background-color: #131313;
-  color: #f5f5f5;
-  padding: 5px 15px;
+.navs {
+  display: none;
 }
 
-.top-nav,
-.main-nav {
-  justify-content: space-between;
-  font-size: 13px;
+.logo {
+  flex-basis: 120px;
 }
 
-.main-nav {
-  padding: 0 15px;
+.search-hamburger {
+  display: block;
+  text-align: right;
 }
 
-.top-nav li,
-.main-nav li,
 .search-hamburger li {
   display: inline-block;
-  padding: 5px;
-}
-
-.main-nav li {
-  padding: 15px 5px;
-  text-transform: uppercase;
-  color: lightgray;
-}
-
-.search-hamburger li {
   border-left: solid thin #f5f5f5;
-  padding: 15px 20px;
+  padding: 10px 20px;
 }
 
 .main-nav,
@@ -110,66 +99,38 @@ nav {
   background-color: #fff;
 }
 
-.search-hamburger {
-  display: none;
-  text-align: right;
+.latest,
+.latest-funding {
+  margin-top: 30px;
 }
 
-.screen {
-  text-align: center;
-  font-size: 12px;
-  margin: 30px auto;
-  color: rgba(0, 0, 0, 0.34);
+.latest-deals {
+  margin-bottom: 30px;
 }
 
-.latest-news {
-  margin: 30px auto;
+.latest .articles {
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
-h2.title {
-  color: red;
-}
-
-.latest-news h2 {
-  padding: 10px;
-}
-
-.latest-news .articles {
-  flex-wrap: wrap;
-}
-
-.latest-news .article {
-  min-height: 220px;
-  flex-basis: 25%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.deal {
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-.latest-news .deal {
-  min-height: 250px;
+.latest .article {
+  min-height: 100%;
+  margin: 5px 0;
 }
 
 .article .story {
-  height: 100%;
-  flex-direction: column;
-}
-
-.card-img p {
-  margin: 0.4rem 0;
+  flex-direction: row;
 }
 
 .story .banner {
+  flex-basis: 100px;
+  min-height: 70px;
   background-color: lightgray;
   background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/cash-480x270.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 70%;
   margin-bottom: 5px;
 }
 
@@ -178,6 +139,7 @@ h2.title {
 }
 
 .story .text {
+  padding-left: 15px;
   width: 100%;
 }
 
@@ -187,15 +149,142 @@ h2.title {
   color: rgba(0, 0, 0, 0.54);
 }
 
+.category {
+  flex-basis: 100%;
+}
+
+.featured-articles {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.featured-articles,
+.res-aside {
+  flex-direction: column;
+  height: auto;
+}
+
+.featured-article {
+  margin: 5px 10px;
+  position: relative;
+  min-height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-article > *,
+.featured-article > *::after {
+  z-index: 1;
+}
+
+.featured-article .fa-description {
+  z-index: 2;
+  color: #fff;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+}
+
+.featured-article::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgb(255,255,255);
+  background: linear-gradient(172deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0.9) 75%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-art,
+.res-aside {
+  flex: 1;
+}
+
+.first-fa {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/07/Pompeo-Iran-Group-Announcement-e1594106115276.jpg");
+}
+
+.second-fa {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/image-6-796x417.png");
+}
+
+.third-fa {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/1-2-796x417.jpg");
+}
+
+.first-fa h2 {
+  padding: 10px 0;
+}
+
+.second-fa h2,
+.third-fa h2 {
+  padding: 5px 0;
+}
+
+.deal {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  min-width: 100%;
+}
+
+.deal-img {
+  width: 100%;
+  height: auto;
+}
+
+.fa-description {
+  font-size: 12px;
+}
+
+.latest-funding .header-title,
+.funding-links {
+  flex-direction: column;
+}
+
+.funding-links {
+  margin: 10px 0;
+  margin-left: -40px;
+  flex: 1;
+  justify-content: flex-end;
+  color: red;
+}
+
+.funding-links li {
+  padding: 3px 0;
+}
+
+.funding-links li a {
+  border-left: 0;
+  font-size: 13px;
+}
+
+.first-fa h2 {
+  font-size: 20px;
+}
+
+.second-fa {
+  border-bottom: 0;
+}
+
+.third-fa {
+  border-top: 0;
+}
+
+.featured-article .material-icons {
+  font-size: 12px;
+}
+
 .categories {
   flex-wrap: wrap;
   margin-top: 50px;
 }
 
 .category {
-  flex-basis: 33.33333%;
+  width: 100%;
   padding: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
+  min-height: 200px;
 }
 
 .category h2 {
@@ -205,6 +294,7 @@ h2.title {
 .category .content {
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/header-image-macos-big-sur-368x276.png");
   position: relative;
+  min-height: 280px;
 }
 
 .category .content::before {
@@ -217,12 +307,16 @@ h2.title {
 }
 
 .content-section {
-  min-height: 200px;
-  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   padding: 14px;
   color: #fff;
-  position: relative;
   z-index: 2;
+}
+
+.content-section h2 {
+  font-size: 20px;
 }
 
 .content-section small {
@@ -275,32 +369,10 @@ h2.title {
   width: 1em;
 }
 
-.deals-cta {
-  float: right;
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: red;
-}
-
-.slash {
-  text-decoration: line-through;
-  color: rgba(0, 0, 0, 0.27);
-}
-
-/* latest funding two */
-.latest-funding {
-  width: 100vw;
-}
-
-.latest-funding .header-title {
-  padding-bottom: 20px;
-}
-
 .latest-funding-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 10px;
+  gap: 20px;
 }
 
 .latest-funding-card {
@@ -358,170 +430,20 @@ h2.title {
   padding: 0.5rem;
 }
 
-/* End of latest funding */
-
-.main-art {
-  flex: 2;
-}
-
-.res-aside {
-  flex-direction: column;
-  flex: 1;
-}
-
-.res-aside a {
-  flex: 1;
-}
-
-.featured-articles {
-  height: 70vh;
-  width: 100%;
-}
-
-.featured-article {
-  margin: 10px;
+.all-deals-link {
+  float: right;
   position: relative;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.featured-article::after {
-  content: "";
-  height: 84%;
-  width: 100%;
-  background-color: rgb(27, 26, 26);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.4;
-  z-index: 0;
-}
-
-.first-fa h2 {
-  font-size: 54px;
-}
-
-.a-text {
-  color: #fff;
-  font-size: 16px;
-  z-index: 10;
-}
-
-.featured-articles span {
-  font-size: 14px;
-}
-
-.first-fa {
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/07/Pompeo-Iran-Group-Announcement-e1594106115276.jpg");
-}
-
-.second-fa {
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/image-6-796x417.png");
-  border-bottom: solid 7px #f5f5f5;
-}
-
-.third-fa {
-  border-top: solid 7px #f5f5f5;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/08/1-2-796x417.jpg");
-}
-
-.fa-description {
-  position: absolute;
-  bottom: 0;
-  left: 14px;
-  padding: 1rem;
-  color: #fff;
-  font-size: 16px;
-  z-index: 10;
-}
-
-/* latest-deals */
-.latest-head {
-  font-size: 16px;
-  color: #eb4222;
-  width: 80%;
-  height: 60px;
-  line-height: 60px;
-  margin: 0 auto;
-  justify-content: space-between;
-}
-
-.latest-deals {
-  position: relative;
-}
-
-.bg1 {
-  background: url("https://cdnp0.stackassets.com/0799bf00352de2d2111fa7580a4aeb4d5e36829c/store/831574f40ca85b498631ae2881f81d02cd9eedd411afd5c0c8f689969ad6/sale_19040_primary_image.jpg");
-}
-
-.bg2 {
-  background: url("https://cdnp0.stackassets.com/32247da9a5b3bbc8dbae1cd6b539eee41a174c44/store/a6921f781563eb46ab4e7e9ad1edc4c7cd473f60de6504f05e70f98c56f7/sale_32423_primary_image.jpg");
-}
-
-.bg3 {
-  background: url("https://cdnp0.stackassets.com/2524c83054eaeeb1d74498c073e4db0134ed7dd1/store/c0c38b6f9d1ac8b5161d84509851f3bf72c0a2e7752f58f971373034be11/sale_32414_primary_image.jpg");
-}
-
-.bg4 {
-  background: url("https://cdnp2.stackassets.com/1b0bd98a9c257d0deba32330f074a986c0ac80ab/store/5244ce0f683265f98baeb686db693a0571c541750ca7a48220c02ced7df1/sale_32417_primary_image.jpg");
-}
-
-.bg5 {
-  background-image: url("https://cdnp0.stackassets.com/49205c1bbff3909782605ff760780b62c695c1dc/store/51459af533e4f99429f037c1db33105d2294ebf64029a82b808d85527e58/sale_32030_primary_image.jpg");
-}
-
-.bg6 {
-  background-image: url("https://cdnp3.stackassets.com/ff35439fd6a5c9e2c5cc4514a7f1923c9ef7ea6f/store/1532b43da15553514d7d8c0215fdd0d1033614864b7071dab71a69d5335b/sale_19163_primary_image.jpg");
-}
-
-.bg7 {
-  background-image: url("https://cdnp2.stackassets.com/f1536aca6ce5cf2e7bfa41eb44fe1160e9b6dbe8/store/584c729c0cbc5db05e8c589444e9f3d397c51222aecaa7d22f421681388b/sale_31768_primary_image.jpg");
-}
-
-.bg8 {
-  background-image: url("https://cdnp3.stackassets.com/0b442829152188ef5c1de0aff7d72820282f26e0/store/73b9b30bec03d67a0c89bae3aaaddafc5a59895b1edd5194d61ab010f926/sale_20564_primary_image.jpg");
-}
-
-.deal-img {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-}
-
-.deal-desc {
-  padding: 1rem;
-}
-
-.deal-desc a {
-  font-size: 16px;
-  font-weight: 700;
-  color: #333;
-}
-
-.cancel {
-  text-decoration: line-through;
-  color: #aaa;
-  font-size: 13px;
-}
-
-.funding-links {
-  margin-left: 0;
-  flex: 1;
-  justify-content: flex-end;
+  top: -20px;
+  font-size: 0.9em;
   color: red;
 }
 
-.funding-links li {
-  padding: 5px;
+.slash {
+  text-decoration: line-through;
 }
 
-.funding-links li a {
-  border-left: solid thin red;
-  padding-left: 5px;
-}
-
-.latest-funding a:hover {
+.deal-price {
+  font-size: 1.2em;
   color: #333;
 }
 
@@ -539,25 +461,12 @@ h2.title {
 
 .sub-footer ul {
   padding: 10px 0;
+  margin: auto;
 }
 
 .sub-footer ul li {
   display: inline-block;
   padding: 5px;
-}
-
-.funding-links li:first-child a {
-  border-left: 0;
-}
-
-.others li:first-child,
-.others li:first-child::before {
-  color: gray;
-}
-
-.main-nav ul:last-child li {
-  border-left: solid thin #f5f5f5;
-  padding-left: 20px;
 }
 
 .sub-footer ul:first-child li {
@@ -596,33 +505,103 @@ h2.title {
   height: 9px;
 }
 
-/* Desktop */
-
-/* @media screen and (min-width: 1024px) {
-
-} */
-
-/* Tablet */
-
-/* @media screen and (min-width: 768px) and (max-width: 1023px) {
-
-} */
-
-/* Desktop */
-@media screen and (min-width: 1024px) {
-  .logo {
+@media screen and (min-width: 768px) {
+  .search-hamburger {
     display: none;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .navs {
+    display: block;
+  }
+
+  .featured-articles {
+    flex-direction: row;
+    padding-top: 10px;
+  }
+
+  .featured-article {
+    margin: 0;
+    margin-left: 10px;
+    bottom: 0;
+    min-height: 200px;
+  }
+
+  .res-aside {
+    margin-right: 10px;
+  }
+
+  .second-fa {
+    margin-bottom: 10px;
+  }
+
+  .main-art {
+    flex: 2;
+  }
+
+  .main-art .featured-article {
+    min-height: 100%;
+  }
+
+  .latest .articles {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .latest .article {
+    padding: 0 10px;
+    flex-direction: column;
+  }
+
+  .article .story {
+    flex-direction: column;
+  }
+
+  .story .banner {
+    min-height: 160px;
+  }
+
+  .story .text {
+    padding: 0;
   }
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .top-nav ul:last-child {
-    display: none;
+  .top-nav {
+    background-color: #131313;
+    color: #f5f5f5;
+    padding: 5px 15px;
   }
 
-  .latest-news .article {
-    flex-basis: 33.33%;
+  .top-nav,
+  .main-nav {
+    justify-content: space-between;
+    font-size: 13px;
+  }
+
+  .main-nav {
+    padding: 0 15px;
+  }
+
+  .top-nav li,
+  .main-nav li,
+  .search-hamburger li {
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .main-nav li {
+    padding: 15px 5px;
+    text-transform: uppercase;
+    color: lightgray;
+  }
+
+  .top-nav ul:last-child {
+    display: none;
   }
 
   .category {
@@ -634,10 +613,16 @@ h2.title {
     flex-direction: column;
   }
 
+  .latest .article {
+    flex-basis: 33.33%;
+  }
+
+  .latest-funding-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .funding-links {
     margin-top: 10px;
-    margin-left: -10px;
-    padding-left: 0;
   }
 
   .funding-links li a {
@@ -655,95 +640,83 @@ h2.title {
   }
 }
 
-/* Mobile */
-@media screen and (max-width: 767px) {
-  .navs {
-    display: none;
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1192px;
   }
 
   .logo {
-    flex-basis: 120px;
+    display: none;
   }
 
-  .search-hamburger {
-    display: block;
+  .top-nav {
+    background-color: #131313;
+    color: #f5f5f5;
+    padding: 5px 15px;
   }
 
-  .latest-news .articles {
-    flex-wrap: nowrap;
-    flex-direction: column;
-  }
-
-  .latest-news .article {
-    min-height: 100%;
-  }
-
-  .article .story {
-    flex-direction: row;
-  }
-
-  .story .banner {
-    flex-basis: 100px;
-    min-height: 70px;
-  }
-
-  .story .text {
-    padding-left: 15px;
-  }
-
-  .category {
-    flex-basis: 100%;
-  }
-
-  .featured-articles {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .featured-article {
-    height: 200px;
-  }
-
-  .deal {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    min-width: 100%;
-  }
-
-  .deal-img {
-    width: 100%;
-    height: auto;
-  }
-
-  .fa-description {
-    font-size: 12px;
-  }
-
-  .latest-funding .header-title,
-  .funding-links {
-    flex-direction: column;
-  }
-
-  .funding-links {
-    margin-top: 10px;
-    margin-left: -10px;
-    padding-left: 0;
-  }
-
-  .funding-links li a {
-    border-left: 0;
+  .top-nav,
+  .main-nav {
+    justify-content: space-between;
     font-size: 13px;
   }
 
+  .main-nav {
+    padding: 0 15px;
+  }
+
+  .top-nav li,
+  .main-nav li {
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .featured-article {
+    min-height: 240px;
+  }
+
   .first-fa h2 {
-    font-size: 20px;
+    font-size: 54px;
+    line-height: 0.95em;
   }
 
-  .second-fa {
-    border-bottom: 0;
+  .second-fa h2,
+  .third-fa h2 {
+    font-size: 26px;
   }
 
-  .third-fa {
-    border-top: 0;
+  .funding-links {
+    flex-direction: row;
+    position: relative;
+    top: -30px;
+  }
+
+  .funding-links li a {
+    padding: 0 10px;
+    border-left: solid thin red;
+    font-size: 13px;
+  }
+
+  .funding-links li:first-child a {
+    border-left: 0;
+  }
+
+  .main-nav li {
+    padding: 15px 5px;
+    text-transform: uppercase;
+    color: lightgray;
+  }
+
+  .latest .article {
+    flex-basis: 25%;
+  }
+
+  .latest-funding-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .category {
+    flex-basis: 33.33%;
   }
 }
