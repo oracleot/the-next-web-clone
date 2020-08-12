@@ -38,7 +38,8 @@ nav,
 .deal,
 .deal-img,
 .category .content::before,
-.card-header {
+.card-header,
+.logo-date {
   width: 100%;
 }
 
@@ -202,6 +203,10 @@ nav {
   z-index: 1;
 }
 
+.logo-date {
+  display: none;
+}
+
 .fa-description {
   font-size: 12px;
 }
@@ -210,7 +215,8 @@ nav {
 .featured-article::after,
 .category .content::before,
 .content-section,
-.card-img img {
+.card-img img,
+.logo-date {
   position: absolute;
 }
 
@@ -664,6 +670,20 @@ nav {
 
   .featured-article {
     min-height: 240px;
+  }
+
+  .logo-date {
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+  }
+
+  .first-fa::after {
+    background: rgb(250,65,8);
+    background: linear-gradient(172deg, rgba(250,65,8,0.5) 0%, rgba(0,0,0,0.9) 75%);
   }
 
   .first-fa h2 {
