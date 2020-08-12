@@ -360,6 +360,10 @@ nav {
   color: #f5f5f5;
 }
 
+.content2 {
+  justify-content: space-between;
+}
+
 .category .content2 {
   background-color: #fff5f4;
   align-items: center;
@@ -397,11 +401,11 @@ nav {
   width: 1em;
 }
 
-.latest-funding-cards {
+/* .latest-funding-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 20px;
-}
+} */
 
 .latest-funding-card {
   height: 250px;
@@ -596,6 +600,12 @@ nav {
   .copyright-text {
     flex-direction: row;
   }
+  .latest-funding-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+  }
+  
 }
 
 /* Tablet */
@@ -646,10 +656,7 @@ nav {
     flex-basis: 33.33%;
   }
 
-  .latest-funding-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
+  
   .funding-links {
     margin-top: 10px;
   }
@@ -753,10 +760,11 @@ nav {
   .latest .article {
     flex-basis: 25%;
   }
-
+/* 
   .latest-funding-cards {
     grid-template-columns: repeat(4, 1fr);
-  }
+    display: none;
+  } */
 
   .category {
     flex-basis: 33.33%;
