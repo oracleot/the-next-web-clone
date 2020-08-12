@@ -186,6 +186,11 @@ nav {
   height: auto;
 }
 
+.card-details a {
+  display: inline-block;
+  margin: 0.3rem 0;
+}
+
 .funding-links li a {
   border-left: 0;
   font-size: 13px;
@@ -228,13 +233,28 @@ nav {
   position: absolute;
 }
 
+.funding-links li {
+  padding: 3px 0;
+}
+
+.others li {
+  line-height: 1.6em;
+  padding: 12px 0;
+  border-bottom: solid thin lightgray;
+}
+
+.sub-footer ul li {
+  display: inline-block;
+  padding: 5px;
+}
+
 .featured-article .fa-description,
 .content-section,
 .card-title,
 .sub-footer,
 .sub-footer ul:first-child li,
 .main-footer,
-.logo-date{
+.logo-date {
   color: #fff;
 }
 
@@ -297,10 +317,6 @@ nav {
   flex: 1;
   justify-content: flex-end;
   color: red;
-}
-
-.funding-links li {
-  padding: 3px 0;
 }
 
 .featured-article .material-icons {
@@ -373,12 +389,6 @@ nav {
   font-size: 13px;
 }
 
-.others li {
-  line-height: 1.6em;
-  padding: 12px 0;
-  border-bottom: solid thin lightgray;
-}
-
 .others li::before {
   content: "\2022";
   color: red;
@@ -428,33 +438,19 @@ nav {
   font-weight: 200;
 }
 
-.more-card-details {
-  border-top: 1px solid #F7C9C2;
-}
-
 .card-details,
 .more-card-details {
   font-size: 13px;
   padding: 0.5rem;
-  background-color: #FEFAF8;
-
-}
-
-/* .card-details {
-  background-color: #FEFAF8;
-  font-size: 13px;
-
-} */
-
-.card-details a {
-  display: inline-block;
-  margin: .3rem 0;
+  background-color: #fefaf8;
 }
 
 .more-card-details {
   font-size: 12px;
   line-height: 15px;
+  border-top: 1px solid #f7c9c2;
 }
+
 .more-card-details span {
   color: #aaa;
 }
@@ -489,11 +485,6 @@ nav {
 .sub-footer ul {
   padding: 10px 0;
   margin: auto;
-}
-
-.sub-footer ul li {
-  display: inline-block;
-  padding: 5px;
 }
 
 .sub-footer ul:first-child li {
@@ -534,7 +525,7 @@ nav {
   justify-content: center;
 }
 
-.copyright-text span{
+.copyright-text span {
   color: #aaa;
   padding: 5px;
 }
@@ -723,8 +714,8 @@ nav {
   }
 
   .first-fa::after {
-    background: rgb(250,65,8);
-    background: linear-gradient(172deg, rgba(250,65,8,0.5) 0%, rgba(0,0,0,0.9) 75%);
+    background: rgb(250, 65, 8);
+    background: linear-gradient(172deg, rgba(250, 65, 8, 0.5) 0%, rgba(0, 0, 0, 0.9) 75%);
   }
 
   .first-fa h2 {
@@ -770,5 +761,4 @@ nav {
   .category {
     flex-basis: 33.33%;
   }
-
 }
