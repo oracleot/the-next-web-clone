@@ -401,12 +401,6 @@ nav {
   width: 1em;
 }
 
-/* .latest-funding-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 20px;
-} */
-
 .latest-funding-card {
   height: 250px;
 }
@@ -600,12 +594,12 @@ nav {
   .copyright-text {
     flex-direction: row;
   }
+
   .latest-funding-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 20px;
   }
-  
 }
 
 /* Tablet */
@@ -656,7 +650,6 @@ nav {
     flex-basis: 33.33%;
   }
 
-  
   .funding-links {
     margin-top: 10px;
   }
@@ -760,11 +753,6 @@ nav {
   .latest .article {
     flex-basis: 25%;
   }
-/* 
-  .latest-funding-cards {
-    grid-template-columns: repeat(4, 1fr);
-    display: none;
-  } */
 
   .category {
     flex-basis: 33.33%;
