@@ -196,6 +196,7 @@ nav {
   font-size: 13px;
 }
 
+.nav,
 .featured-article,
 .category .content,
 .card-img,
@@ -534,17 +535,13 @@ nav {
     display: none;
   }
 
-  nav {
-    position: relative;
-  }
-
   .navs {
     display: block;
   }
 
   .featured-articles {
     flex-direction: row;
-    padding-top: 10px;
+    padding-top: 7rem;
   }
 
   .featured-article {
@@ -648,7 +645,7 @@ nav {
   }
 
   .latest-funding-cards {
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   }
 
   .latest-funding-card:last-child {
@@ -699,7 +696,6 @@ nav {
     justify-content: space-between;
     font-size: 13px;
   }
- 
 
   .main-nav {
     padding: 0 15px;
