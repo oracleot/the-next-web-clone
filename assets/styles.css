@@ -429,13 +429,34 @@ nav {
 }
 
 .more-card-details {
-  border-top: 1px solid blanchedalmond;
+  border-top: 1px solid #F7C9C2;
 }
 
 .card-details,
 .more-card-details {
-  font-size: 15px;
+  font-size: 13px;
   padding: 0.5rem;
+  background-color: #FEFAF8;
+
+}
+
+/* .card-details {
+  background-color: #FEFAF8;
+  font-size: 13px;
+
+} */
+
+.card-details a {
+  display: inline-block;
+  margin: .3rem 0;
+}
+
+.more-card-details {
+  font-size: 12px;
+  line-height: 15px;
+}
+.more-card-details span {
+  color: #aaa;
 }
 
 .all-deals-link {
@@ -749,4 +770,5 @@ nav {
   .category {
     flex-basis: 33.33%;
   }
+
 }
