@@ -201,6 +201,7 @@ nav {
 .card-img,
 .content-section small,
 .all-deals-link,
+.funding-links,
 .sub-footer ul:first-child li a {
   position: relative;
 }
@@ -597,13 +598,13 @@ nav {
 
   .latest-funding-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 20px;
   }
 }
 
 /* Tablet */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .top-nav {
     background-color: #131313;
     color: #f5f5f5;
@@ -646,6 +647,14 @@ nav {
     flex-direction: column;
   }
 
+  .latest-funding-cards {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
+  }
+
+  .latest-funding-card:last-child {
+    display: none;
+  }
+
   .latest .article {
     flex-basis: 33.33%;
   }
@@ -670,7 +679,7 @@ nav {
 }
 
 /* Desktop */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .container {
     max-width: 1192px;
   }
@@ -690,6 +699,7 @@ nav {
     justify-content: space-between;
     font-size: 13px;
   }
+ 
 
   .main-nav {
     padding: 0 15px;
@@ -730,7 +740,6 @@ nav {
 
   .funding-links {
     flex-direction: row;
-    position: relative;
     top: -30px;
   }
 
